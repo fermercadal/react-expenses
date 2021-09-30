@@ -1,0 +1,9 @@
+.expenses__card {
+  display: flex;
+  background-color: #F1FAEE;
+  border-radius: 8px;
+  flex-direction: row;
+  align-items: flex-end;
+  margin-bottom: 1em;
+  padding: 0.8em;
+}

@@ -1,7 +1,7 @@
 import "./Card.css";
 
 const Card = (props) => {
-  const classes = `expense-item ${props.className}`;
+  const classes = `expenses__card ${props.className}`;
   return <div className={classes}>{props.children}</div>;
 };
 

@@ -1,0 +1,35 @@
+body {
+  background-color: #FFFFFF;
+  color: #05090F;
+  font-size: 16px;
+  padding: 2em;
+}
+
+.expenses {
+  align-items: center;
+  display: flex;
+  flex-direction: column; 
+}
+
+h1 {
+  font-size: 1.4em;
+  margin-bottom: 2em;
+}
+
+
+
+/*
+
+05090F
+
+1D3557
+457B9D
+A8DADC
+
+E63946
+
+F1FAEE
+
+
+
+*/

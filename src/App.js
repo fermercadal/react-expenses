@@ -25,10 +25,11 @@ function App() {
   ];
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <Expenses items={expenses} />
+    <div className="expenses">
+      <header className="expenses__header">
+        <h1>MyExpenses App</h1>
       </header>
+      <Expenses items={expenses} />
     </div>
   );
 }

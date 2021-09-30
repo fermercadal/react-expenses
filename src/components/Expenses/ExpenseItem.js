@@ -6,9 +6,9 @@ import "./ExpenseItem.css";
 const ExpenseItem = (props) => {
   return (
     <Card>
-      <h2>{props.title}</h2>
       <ExpenseDate date={props.date} />
-      <div>{props.amount}</div>
+      <h2 className="expense__title">{props.title}</h2>
+      <div className="expense__amount">{props.amount}</div>
     </Card>
   );
 }

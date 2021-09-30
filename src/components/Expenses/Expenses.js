@@ -12,7 +12,7 @@ function Expenses(props) {
       />
     );
   });
-  return <div className="expenses">{expenseItems}</div>;
+  return <div className="expenses__list">{expenseItems}</div>;
 }
 
 export default Expenses;

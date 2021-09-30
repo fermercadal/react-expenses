@@ -1,0 +1,17 @@
+.expense__date {
+  background: lime;
+  margin-right: 2em;
+  width: 200px;
+}
+
+.date__year {
+  font-size: 0.8em;
+}
+
+.date__month {
+  margin-right: 0.5em;
+}
+
+.date__day {
+  font-weight: bold;
+}
