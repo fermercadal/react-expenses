@@ -1,3 +1,5 @@
+import React from 'react';
+
 import "./ExpenseDate.css";
 
 const ExpenseDate = (props) => {
@@ -8,8 +10,8 @@ const ExpenseDate = (props) => {
   return (
     <div className="expense__date">
       <div className="date__year">{year}</div>
-      <span className="date__month">{month}</span>
-      <span className="date__day">{day}</span>
+      <div className="date__month">{month}</div>
+      <div className="date__day">{day}</div>
     </div>
   );
 };
