@@ -1,25 +1,6 @@
 import React, { useState } from "react";
 
-import "./ExpenseForm.css";
-
 const ExpenseForm = (props) => {
-  /*   
-  // Example using a single object
-  const [userInput, setUserInput] = useState({
-    title: "",
-    amount: 0.01,
-    date: new Date(),
-  });
-
-  const titleChangeHandler = (event) => {
-    setUserInput((prevState) => {
-      return {
-        ...prevState,
-        title: event.target.value,
-      };
-    });
-  }; */
-
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");

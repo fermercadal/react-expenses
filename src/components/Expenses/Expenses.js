@@ -3,8 +3,6 @@ import React, { useState } from "react";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
 
-import "./Expenses.css";
-
 function Expenses(props) {
   const [enteredQuery, setEnteredQuery] = useState("2021");
 
