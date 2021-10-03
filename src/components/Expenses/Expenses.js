@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from "react";
 
+import ExpensesFilter from "./ExpensesFilter";
 import ExpenseItem from "./ExpenseItem";
+
 import "./Expenses.css";
 
 function Expenses(props) {
+  const [enteredQuery, setEnteredQuery] = useState("2020");
+
+  const setQueryHandler = (query) => {
+    setEnteredQuery(query);
+  };
+
   const expenseItems = props.items.map((expense) => {
     return (
       <ExpenseItem
@@ -14,7 +22,12 @@ function Expenses(props) {
       />
     );
   });
-  return <div className="expenses__list">{expenseItems}</div>;
+  return (
+    <div>
+      <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
+      <div className="expenses__list">{expenseItems}</div>
+    </div>
+  );
 }
 
 export default Expenses;
