@@ -6,13 +6,17 @@ import ExpenseItem from "./ExpenseItem";
 import "./Expenses.css";
 
 function Expenses(props) {
-  const [enteredQuery, setEnteredQuery] = useState("2020");
+  const [enteredQuery, setEnteredQuery] = useState("2021");
 
   const setQueryHandler = (query) => {
     setEnteredQuery(query);
   };
 
-  const expenseItems = props.items.map((expense) => {
+  const filteredExpenses = props.items.filter((expense) => {
+    return expense.date.getFullYear().toString() === enteredQuery;
+  });
+
+  const expenseItems = filteredExpenses.map((expense) => {
     return (
       <ExpenseItem
         title={expense.title}
@@ -22,6 +26,7 @@ function Expenses(props) {
       />
     );
   });
+
   return (
     <div>
       <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
