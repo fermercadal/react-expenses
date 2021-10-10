@@ -1,6 +1,6 @@
 # Expenses App
 
-Yet another boring expenses tracking app, using Create-React-App, useState hook and CSS Modules. Made as part of the "React The Complete Guide" course on Udemy. 
+Yet another boring expenses tracking app, made with Create-React-App, useState hook and CSS Modules, as part of the "React The Complete Guide" course on Udemy.
 
 ## Available Scripts
 
