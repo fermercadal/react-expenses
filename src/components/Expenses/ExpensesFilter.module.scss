@@ -1,0 +1,17 @@
+.expensesFilter {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 1rem;
+
+  label {
+    font-size: 0.9em;
+    margin-right: 0.5rem;
+  }
+
+  select {
+    border: 1px solid var(--color-gray);
+    border-radius: 1px;
+  }
+}

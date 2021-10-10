@@ -9,7 +9,7 @@ const ExpenseDate = (props) => {
 
   return (
     <div className={styles.expenseDate}>
-      {`${year}, ${month} ${day}.`}
+      <span>{`${year}, ${month} ${day}.`}</span>
     </div>
   );
 };
