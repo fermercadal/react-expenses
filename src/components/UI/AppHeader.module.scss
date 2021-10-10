@@ -1,0 +1,18 @@
+.appHeader {
+  background-color: var(--color-light);
+  padding: 2rem 3rem;
+  text-align: center;
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+}

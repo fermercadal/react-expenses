@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 
+import AppHeader from "./components/UI/AppHeader";
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expenses";
+
+import styles from "./App.module.scss";
 
 function App() {
   const DUMMY_EXPENSES = [
@@ -21,26 +24,27 @@ function App() {
     {
       id: "e4",
       title: "New Desk (Wooden)",
-      amount: 450.40,
+      amount: 450.4,
       date: new Date(2021, 5, 12),
     },
   ];
 
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
 
-  const addExpenseHandler = expense => {
-    setExpenses(prevExpenses => {
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
   };
 
   return (
-    <div className="expenses">
-      <header className="expenses__header">
-        <h1>MyExpenses App</h1>
-      </header>
-      <NewExpense onAddExpense={addExpenseHandler} />
+    <div className={styles.reactExpenses}>
+      <AppHeader>
+        <h1>ReactExpenses</h1>
+        <p>Yet another boring expenses tracking app.</p>
+      </AppHeader>
       <Expenses items={expenses} />
+      <NewExpense onAddExpense={addExpenseHandler} />
     </div>
   );
 }

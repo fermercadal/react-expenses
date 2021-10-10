@@ -1,0 +1,17 @@
+.expenseItem {
+  align-items: flex-end;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+}
+
+.expenseItem__title {
+  font-size: 1em;
+  font-weight: 600;
+  margin: 0 auto 0 0;
+}
+
+.expenseItem__amount {
+
+}

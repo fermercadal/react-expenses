@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
+import AppSection from "../UI/AppSection";
 import ExpensesFilter from "./ExpensesFilter";
 import ExpensesList from "./ExpensesList";
+import ExpensesChart from "./ExpensesChart";
 
 function Expenses(props) {
   const [enteredQuery, setEnteredQuery] = useState("2021");
@@ -15,10 +17,16 @@ function Expenses(props) {
   });
 
   return (
-    <div>
-      <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
-      <ExpensesList items={filteredExpenses} />
-    </div>
+    <>
+      <AppSection>
+        <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
+        <ExpensesList items={filteredExpenses} />
+      </AppSection>
+
+      <AppSection>
+        <ExpensesChart expenses={filteredExpenses} />
+      </AppSection>
+    </>
   );
 }
 

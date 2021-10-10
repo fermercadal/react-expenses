@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import styles from "./ExpenseForm.module.scss";
+
 const ExpenseForm = (props) => {
   const [enableForm, setEnableForm] = useState(false);
 
@@ -28,7 +30,7 @@ const ExpenseForm = (props) => {
 
     const expenseData = {
       title: enteredTitle,
-      amount: enteredAmount,
+      amount: +enteredAmount,
       date: new Date(enteredDate),
     };
 
@@ -39,8 +41,8 @@ const ExpenseForm = (props) => {
   };
 
   return (
-    <div>
-      {!enableForm && <button onClick={toggleFormHandler}>Add new</button>}
+    <>
+      {!enableForm && <button className={styles.expenseForm__button} onClick={toggleFormHandler}>Add New</button>}
 
       {enableForm && (
         <form onSubmit={submitHandler}>
@@ -84,7 +86,7 @@ const ExpenseForm = (props) => {
           <button onClick={toggleFormHandler}>Cancel</button>
         </form>
       )}
-    </div>
+    </>
   );
 };
 
