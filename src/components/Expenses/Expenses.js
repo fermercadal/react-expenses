@@ -18,13 +18,13 @@ function Expenses(props) {
 
   return (
     <>
+      <AppSection>
+        <ExpensesChart expenses={filteredExpenses} />
+      </AppSection>
+
       <AppSection extended={true}>
         <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
         <ExpensesList items={filteredExpenses} />
-      </AppSection>
-
-      <AppSection>
-        <ExpensesChart expenses={filteredExpenses} />
       </AppSection>
     </>
   );

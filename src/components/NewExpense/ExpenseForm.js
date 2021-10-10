@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import globalStyles from "../Global.module.scss";
 import styles from "./ExpenseForm.module.scss";
 
 const ExpenseForm = (props) => {
@@ -42,23 +43,29 @@ const ExpenseForm = (props) => {
 
   return (
     <>
-      {!enableForm && <button className={styles.expenseForm__button} onClick={toggleFormHandler}>Add New</button>}
+      {!enableForm && (
+        <button className={styles.expenseForm__add} onClick={toggleFormHandler}>
+          Add New
+        </button>
+      )}
 
       {enableForm && (
-        <form onSubmit={submitHandler}>
-          <div className="new-expense__controls">
-            <div className="new-expense__control">
-              <label>Title</label>
+        <form className={styles.expenseForm} onSubmit={submitHandler}>
+          <div className={styles.expenseForm__fields}>
+            <div className={styles.expenseForm__field}>
+              <label for="title">Title</label>
               <input
+                id="title"
                 type="text"
                 value={enteredTitle}
                 onChange={titleChangeHandler}
               />
             </div>
 
-            <div className="new-expense__control">
-              <label>Amount:</label>
+            <div className={styles.expenseForm__field}>
+              <label for="amount">Amount</label>
               <input
+                id="amount"
                 type="number"
                 min="0.01"
                 step="0.01"
@@ -67,9 +74,10 @@ const ExpenseForm = (props) => {
               />
             </div>
 
-            <div className="new-expense__control">
-              <label>Date</label>
+            <div className={styles.expenseForm__field}>
+              <label for="date">Date</label>
               <input
+                id="date"
                 type="date"
                 min="2019-01-01"
                 max="2022-12-31"
@@ -79,11 +87,10 @@ const ExpenseForm = (props) => {
             </div>
           </div>
 
-          <div className="new-expense__actions">
-            <button type="submit">Add expense</button>
+          <div className={styles.expenseForm__actions}>
+            <button className={`${globalStyles.btn} ${globalStyles["btn--secondary"]}`} onClick={toggleFormHandler}>Cancel</button>
+            <button className={`${globalStyles.btn} ${globalStyles["btn--primary"]}`} type="submit">Add expense</button>
           </div>
-
-          <button onClick={toggleFormHandler}>Cancel</button>
         </form>
       )}
     </>
