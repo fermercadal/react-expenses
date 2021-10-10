@@ -5,4 +5,10 @@
 
   --color-primary: #96031A;
   --color-secondary: #DB504A;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: flex-end;
+  width: 100vw;
 }

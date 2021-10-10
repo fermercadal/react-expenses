@@ -2,6 +2,8 @@ import React from 'react';
 
 import ExpenseItem from "./ExpenseItem";
 
+import styles from "./ExpensesList.module.scss";
+
 const ExpensesList = (props) => {
   
   const expenseItems = props.items.map((expense) => {
@@ -18,7 +20,7 @@ const ExpensesList = (props) => {
   const noItems = <p>No expenses found.</p>
 
   return (
-    <div className="expenses__list">
+    <div className={styles.expensesList}>
       {props.items.length ? expenseItems : noItems}
     </div>
   );

@@ -18,7 +18,7 @@ function Expenses(props) {
 
   return (
     <>
-      <AppSection>
+      <AppSection extended={true}>
         <ExpensesFilter selected={enteredQuery} onSetQuery={setQueryHandler} />
         <ExpensesList items={filteredExpenses} />
       </AppSection>
