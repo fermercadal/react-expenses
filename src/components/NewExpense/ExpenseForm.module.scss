@@ -1,6 +1,7 @@
 .expenseForm__add {
   background-color: var(--color-primary);
   border: 0;
+  box-sizing: border-box;
   color: var(--color-light);
   display: block;
   font-size: 1.2em;
@@ -26,6 +27,10 @@
 
 .expenseForm__fields {
   width: 100%;
+
+  @media screen and (min-width: 980px) {
+    max-width: 600px;
+  }
 }
 
 .expenseForm__field {
@@ -52,4 +57,8 @@
   justify-content: space-between;
   margin-top: 2rem;
   width: 100%;
+
+  @media screen and (min-width: 980px) {
+    max-width: 600px;
+  }
 }
